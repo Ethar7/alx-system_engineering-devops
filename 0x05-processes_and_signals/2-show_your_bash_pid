@@ -2,4 +2,3 @@
 # Display lines containing the word "bash" (excluding this script itself)
 # shellcheck disable=SC2009
 ps aux | grep -w "bash"
-echo "Here we can see that my Bash PID is $$."
