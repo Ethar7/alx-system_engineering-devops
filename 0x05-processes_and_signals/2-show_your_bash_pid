@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Display lines containing the word "bash" (excluding this script itself)
-ps aux | grep -v "$0" | grep -w "bash"
-# Suppress ShellCheck error SC2009 (command substitution within a command)
 # shellcheck disable=SC2009
+ps aux | grep -w "bash"
 echo "Here we can see that my Bash PID is $$."
