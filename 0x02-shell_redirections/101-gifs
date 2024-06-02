@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Function to remove the file extension
+remove_extension() {
+    filename="$1"
+    echo "${filename%.*}"
+}
+
+# List all .gif files (including hidden ones) in the current directory and its subdirectories
+find . -type f -iname "*.gif" | while read -r gif_file; do
+    # Remove the extension and print the file name
+    remove_extension "$gif_file"
+done | sort -f
+
